@@ -34,30 +34,6 @@ void calculateTriangleOperations(float side_a, float side_b, float side_c) {
     }
 }
 
-
-void calculateTrapezoidOperations(float side_a, float side_b, float side_c, float side_d, float height) {
-    float perimeter = side_a + side_b + side_c + side_d;
-    float area = ((side_a + side_b) / 2) * height;
-    float median = (side_a + side_b) / 2;
-
-    cout << "Trapezoid:" << endl;
-    cout << "Perimeter: " << perimeter << endl;
-    cout << "Area: " << area << endl;
-    cout << "Median length: " << median << endl;
-}
-
-void calculateCircleOperations(float radius, float sector_angle) {
-    const float pi = 3.141592653589793;
-    float area = pi * pow(radius, 2);
-    float circumference = 2 * pi * radius;
-    float sector_area = (sector_angle / 360.0) * area;
-
-    cout << "Circle:" << endl;
-    cout << "Area: " << area << endl;
-    cout << "Circumference: " << circumference << endl;
-    cout << "Sector Area (" << sector_angle << " degrees): " << sector_area << endl;
-}
-
 int main() {
     int shape_number;
 
