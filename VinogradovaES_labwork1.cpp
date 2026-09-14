@@ -18,7 +18,7 @@ void calculateTriangleOperations(float side_a, float side_b, float side_c) {
         cout << "Invalid triangle!" << endl;
         return;
     }
-
+    
     float perimeter = side_a + side_b + side_c;
     float half_perimeter = perimeter / 2;
     float area = sqrt(half_perimeter * (half_perimeter - side_a) * (half_perimeter - side_b) * (half_perimeter - side_c));
@@ -34,7 +34,6 @@ void calculateTriangleOperations(float side_a, float side_b, float side_c) {
     }
 }
 
-
 void calculateTrapezoidOperations(float side_a, float side_b, float side_c, float side_d, float height) {
     float perimeter = side_a + side_b + side_c + side_d;
     float area = ((side_a + side_b) / 2) * height;
@@ -47,6 +46,14 @@ void calculateTrapezoidOperations(float side_a, float side_b, float side_c, floa
 }
 
 void calculateCircleOperations(float radius, float sector_angle) {
+    if (sector_angle < 0 || sector_angle > 360) { 
+        cout << "Invalid sector angle!" << endl; 
+        return; 
+    }
+    if (radius < 0) {
+        cout << "Invalid radius!" << endl;
+        return;
+    }
     const float pi = 3.141592653589793;
     float area = pi * pow(radius, 2);
     float circumference = 2 * pi * radius;
