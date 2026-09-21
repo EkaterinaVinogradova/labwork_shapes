@@ -46,14 +46,15 @@ void calculateTrapezoidOperations(float side_a, float side_b, float side_c, floa
 }
 
 void calculateCircleOperations(float radius, float sector_angle) {
-    if (sector_angle < 0 || sector_angle > 360) { 
+    if (sector_angle < 0 || sector_angle > 360) { //added if 
         cout << "Invalid sector angle!" << endl; 
         return; 
     }
-    if (radius < 0) {
-        cout << "Invalid radius!" << endl;
+    if (radius < 0) { //added if
+        cout << "Invalid radius!" << endl; 
         return;
     }
+    //addded tests and if statment
     const float pi = 3.141592653589793;
     float area = pi * pow(radius, 2);
     float circumference = 2 * pi * radius;
