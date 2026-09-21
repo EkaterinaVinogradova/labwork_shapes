@@ -46,11 +46,11 @@ void calculateTrapezoidOperations(float side_a, float side_b, float side_c, floa
 }
 
 void calculateCircleOperations(float radius, float sector_angle) {
-    if (sector_angle < 0 || sector_angle > 360) { //added if 
+    if (sector_angle < 0 || sector_angle > 360) { //added if statement
         cout << "Invalid sector angle!" << endl; 
         return; 
     }
-    if (radius < 0) { //added if
+    if (radius < 0) { //added if statement
         cout << "Invalid radius!" << endl; 
         return;
     }
